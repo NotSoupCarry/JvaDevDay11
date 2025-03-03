@@ -122,7 +122,7 @@ class Partita {
 }
 //#endregion
 
-// #region METODI DI CONTROLLO INPUT
+// #region CLASSE CONTROLLI CON METODI DI CONTROLLO INPUT
 class Controlli{
     public static final int NUMERO_GIOCATORI = 1;
     public static final String[] RUOLI_VALIDI = {"Portiere", "Difensore", "Centrocampista", "Attaccante"};
