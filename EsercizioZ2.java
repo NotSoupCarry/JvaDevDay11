@@ -9,13 +9,13 @@ public class EsercizioZ2 {
         String nome = controlloInputStringhe(scanner);
 
         System.out.print("Inserisci il tipo di cucina: ");
-        String tipo = controlloInputStringhe(scanner);
+        String tipoCucina = controlloInputStringhe(scanner);
 
         System.out.print("Inserisci un ingrediente principale (Pasta, Riso, Carne, Pesce, Verdure): ");
         String ingrediente = controlloInputStringhe(scanner);
 
         // Creiamo un oggetto Chef
-        Chef chef = new Chef(nome, tipo, ingrediente);
+        Chef chef = new Chef(nome, tipoCucina, ingrediente);
 
         // Lo chef prepara un piatto
         chef.preparaPiatto();
