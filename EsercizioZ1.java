@@ -25,7 +25,7 @@ public class EsercizioZ1 {
         String autore = controlloInputStringhe(scanner);
 
         System.out.print("Inserisci il numero di pagine: ");
-        int nrPagine = scanner.nextInt();
+        int nrPagine = controlloInputInteri(scanner);
 
         // aggiunta del libro inserito dall'utente
         biblioteca.aggiungiLibro(new Libro(titolo, autore, nrPagine));
@@ -45,6 +45,23 @@ public class EsercizioZ1 {
         scanner.close();
     }
 
+    // #region METODI PER IL CONTROLLO DEGLI INPUT
+    // Metodo per controllare l'input intero
+    public static Integer controlloInputInteri(Scanner scanner) {
+        Integer valore;
+        do {
+            while (!scanner.hasNextInt()) {
+                System.out.print("Devi inserire un numero intero. Riprova ");
+                scanner.next();
+            }
+            valore = scanner.nextInt();
+            if (valore < 0) {
+                System.out.print("Il numero non può essere negativo. Riprova: ");
+            }
+        } while (valore < 0);
+        return valore;
+    }
+
     // Metodo per controllare che l'input stringa non sia vuoto
     public static String controlloInputStringhe(Scanner scanner) {
         String valore;
@@ -56,6 +73,7 @@ public class EsercizioZ1 {
         } while (valore.isEmpty());
         return valore;
     }
+    //#endregion
 }
 
 // Classe Libro

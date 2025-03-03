@@ -22,6 +22,7 @@ public class EsercizioZ2 {
         scanner.close();
     }
 
+    //#region METODI DI CONTROLLO INPUT
     // Metodo per controllare che l'input stringa non sia vuoto
     public static String controlloInputStringhe(Scanner scanner) {
         String valore;
@@ -33,6 +34,7 @@ public class EsercizioZ2 {
         } while (valore.isEmpty());
         return valore;
     }
+    //#endregion
 }
 
 // Classe Chef
