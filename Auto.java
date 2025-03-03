@@ -1,20 +1,4 @@
-
-public class ProvaClassi {
-
-     public static void main(String[] args){
-        Auto auto = new Auto("Fiat", "blu");
-
-        System.out.println("Modello: " + auto.modello);
-        System.out.println("Colore: " + auto.colore);
-
-        auto.accellera(50);
-        auto.frenare(20);
-        auto.accellera(100);
-        auto.frenare(200);
-     }
-}
-
-class Auto {
+public class Auto {
     //attributi
     public String modello;
     public String colore;
