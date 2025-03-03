@@ -15,7 +15,7 @@ public class EsercizioZ1 {
         System.out.println("Libri in biblioteca:");
         biblioteca.stampaTuttiLibri();
 
-        // Chiediamo all'utente di aggiungere un libro
+        // Chiedo all'utente di aggiungere un libro
         System.out.println("\nAggiungi un nuovo libro alla biblioteca:");
 
         System.out.print("Inserisci il titolo: ");
@@ -35,8 +35,8 @@ public class EsercizioZ1 {
         biblioteca.stampaTuttiLibri();
 
         scanner.nextLine();
-        
-        // ercare un libro per titolo
+
+        // cercare un libro per titolo
         System.out.println("\nCerca un libro per titolo:");
         System.out.print("Inserisci il titolo del libro che vuoi cercare: ");
         String titoloCercato = controlloInputStringhe(scanner);

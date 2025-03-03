@@ -14,10 +14,9 @@ public class EsercizioZ2 {
         System.out.print("Inserisci un ingrediente principale (Pasta, Riso, Carne, Pesce, Verdure): ");
         String ingrediente = controlloInputStringhe(scanner);
 
-        // Creiamo un oggetto Chef
+        // Creo un oggetto Chef
         Chef chef = new Chef(nome, tipoCucina, ingrediente);
 
-        // Lo chef prepara un piatto
         chef.preparaPiatto();
 
         scanner.close();
