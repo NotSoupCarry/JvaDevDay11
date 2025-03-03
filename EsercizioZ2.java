@@ -6,13 +6,13 @@ public class EsercizioZ2 {
 
         // Chiediamo all'utente i dati dello Chef
         System.out.print("Inserisci il nome dello Chef: ");
-        String nome = scanner.nextLine();
+        String nome = controlloInputStringhe(scanner);
 
         System.out.print("Inserisci il tipo di cucina: ");
-        String tipo = scanner.nextLine();
+        String tipo = controlloInputStringhe(scanner);
 
         System.out.print("Inserisci un ingrediente principale (Pasta, Riso, Carne, Pesce, Verdure): ");
-        String ingrediente = scanner.nextLine();
+        String ingrediente = controlloInputStringhe(scanner);
 
         // Creiamo un oggetto Chef
         Chef chef = new Chef(nome, tipo, ingrediente);
@@ -21,6 +21,18 @@ public class EsercizioZ2 {
         chef.preparaPiatto();
 
         scanner.close();
+    }
+
+    // Metodo per controllare che l'input stringa non sia vuoto
+    public static String controlloInputStringhe(Scanner scanner) {
+        String valore;
+        do {
+            valore = scanner.nextLine().trim();
+            if (valore.isEmpty()) {
+                System.out.print("Input non valido. Inserisci un testo: ");
+            }
+        } while (valore.isEmpty());
+        return valore;
     }
 }
 
@@ -41,7 +53,7 @@ class Chef {
     public void preparaPiatto() {
         System.out.println("\nLo chef " + nome + " sta preparando un piatto di cucina " + tipoCucina + "...");
 
-        switch (ingrediente.toLowerCase()) {
+        switch (ingrediente.toLowerCase().trim()) {
             case "pasta":
                 System.out.println("CARBONARA???");
                 break;
